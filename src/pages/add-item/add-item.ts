@@ -12,20 +12,21 @@ import { NavController, ViewController } from 'ionic-angular';
   templateUrl: 'add-item.html'
 })
 export class AddItemPage {
-
+ 
   title;
-  description
-   constructor(public navCtrl: NavController, public view: ViewController){}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddItemPage');
+  description;
+ 
+  constructor(public navCtrl: NavController, public view: ViewController) {
+ 
   }
-
-saveitem(){
- let newItem = {
+ 
+  saveItem(){
+ 
+    let newItem = {
       title: this.title,
       description: this.description
     };
+    
  
     this.view.dismiss(newItem);
  
@@ -34,5 +35,5 @@ saveitem(){
   close(){
     this.view.dismiss();
   }
-
+ 
 }
